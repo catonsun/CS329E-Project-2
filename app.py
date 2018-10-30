@@ -1,6 +1,6 @@
 def makeList(file): #adds words individually into a list
     questions = []
-    questions = file.split()
+    questions = file.splitlines()
 
     return (questions)
 
@@ -10,3 +10,5 @@ def main():
     qList = []
     qList = makeList(quiz)
     print(qList)
+
+main()
