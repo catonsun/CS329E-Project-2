@@ -1,0 +1,31 @@
+Question,Choice A,Choice B,Choice C,Choice D,Answer
+What is this group's name?,Epic,Epic Movement,AACM,J3 Squad,A. Epic
+Extrem programming is often referred to as the waterfall model,TRUE,FALSE,N/A,N/A,B. FALSE
+What is our Software Engineering professor's name?,Mitra,Coffman-Wolph,Bulko,Coffman-Wolf,B. Coffman-Wolph
+Many people who participate in pair programming feel that they learn or sharpen their knowledge of the subject.,TRUE,FALSE,N/A,N/A,A. TRUE
+Where is our Software Engineering class held?,GSB 2.126,CBA 4.328,WAG 201,JGB 2.218,D. JGB 2.218
+What is an integral part of Extreme Programming,Working Alone,Never testing until completion,Pair Programming,2 of the above,C. Pair Progamming
+"In pair programming, one person is the driver and the other person plays the role of the _________?",FRQ,FRQ,FRQ,FRQ,Navigator
+What days are Software Engineering office hours held?,Monday,Tuesday,Wednesday,2 of the above,D. 2 of the above
+When are Software Engineering office hours NOT held?,11-noon,2:30-2:30pm,1-2pm,4-5pm,D. 4-5pm
+"Generally speaking, to denote the unit test file we add the word “test” to the file name. Either at the beginning or the end.",TRUE,FALSE,N/A,N/A,A. TRUE
+White box testing is the opposite of _______ box testing.,FRQ,FRQ,FRQ,FRQ,Black
+Who is a user story written from the perspective of?,No one,The general population,The person who wants the feature,The programmer,C. The person who wants the feature
+An epic is a…?,Not a thing in XP,A very large user story,A medium sized user story,A very small user story,B. A very large user story
+"You, generally, break epics down into smaller user stories.",TRUE,FALSE,N/A,N/A,A. TRUE
+People participating in pair programming activities tend to be more focused and make better progress.,TRUE,FALSE,N/A,N/A,A. TRUE
+_____ box testing is synonymous with Unit testing.,FRQ,FRQ,FRQ,FRQ,White
+"In python, to do unit testing we must import which:",Unittest,Math,Pi,Test,A. Unittest
+Unit tests allow us to more easily make changes to the code without worrying as much about effecting all of the code.,TRUE,FALSE,N/A,N/A,A. TRUE
+"According to the Agile Manifesto, business people and developers must…",Never communicate,Have meetings over lunch,Work together once a month,Work together daily,D. Work together daily
+Pair programming can only be done when the driver and navigator are located in the exact same physical location. This is a major pitfall of XP.,TRUE,FALSE,N/A,N/A,B. FALSE
+Extreme programming is learned through…,Mostly by doing it,Watching others,Doing a training course,Memorizing a catchy phrase,A. Mostly by doing it
+"According to the Agile Manifesto, what is the primary measure of progress?",Hours spent working,Working software,Number of meetings,The number of unit tests written,B. Working software
+User stories must be testable. This is usually done using ____ tests.,FRQ,FRQ,FRQ,FRQ,Unit
+One of the popular agile practices used in industry is extremely low collaboration between customers and the members of the software development team.,TRUE,FALSE,N/A,N/A,B. FALSE
+Popular practices of Agile in industry include:,Short iterations,monthly meetings,Prioritized lists,Both A & C,D. Both A & C
+Acceptance testing is more narrow in scope than unit testing,TRUE,FALSE,N/A,N/A,B. FALSE
+User stories have 2 main parts. They are:,A name,A short description,A diagram,Both A & B,D. Both A & B
+"Once a user story is written, it cannot be changed.",TRUE,FALSE,N/A,N/A,B. FALSE
+____ is a unit testing framework is built into python.,FRQ,FRQ,FRQ,FRQ,pyUnit
+Unit Tests are designed to specifically deal with the behavior of …,Local pieces of code,Global pieces of code,Whole programs,Confusing loops,A. Local pieces of code
