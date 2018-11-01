@@ -32,5 +32,5 @@ def main():
     #     print("You Suck")
 
 
-
-main()
+if __name__ == '__main__':
+    main()
