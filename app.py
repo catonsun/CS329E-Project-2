@@ -21,17 +21,18 @@ def main():
     quiz = file.read()
     qList = []
     qList = makeList(quiz)
-    print(qList)
+    #print(qList)
     numQuestions = int(input("How many questions do you want (1-30)?"))
     print("Okay you will have " + str(numQuestions) + " questions")
 
-    numBots = int(input("How man players do you want to play against (0-3)?"))
+    numBots = int(input("How many players do you want to play against (0-3)?"))
     print("Okay you will be playing against " + str(numBots) + " computer(s)")
     for bots in range (numBots):
         maxPoints = numQuestions
         bot = compPlayer("Computer" + str(bots+1), maxPoints)
         print(bot.name)
-        print(bot.totalPoints())
+
+    ready = input("Press any key to start")
 
     playerPoints = 0
     q = 6
@@ -54,10 +55,14 @@ def main():
 
         if x == qList[q]:
             playerPoints += 1
-            print("Good Job, you have " + str(playerPoints) + " points")
+            print("Good Job, you have " + str(playerPoints) + " points\n")
         else:
-            print("You Suck, you have " +str(playerPoints) +" points")
+            print("You Suck, you have " +str(playerPoints) +" points\n")
 
-
+    finish = input("Game finished. Press any key to see final score")
+    print("Final Scores:")
+    print("Your score is: " + str(playerPoints))
+    for bots in range (numBots):
+        print(bot.name + "score is: " + str(bot.totalPoints()))
 
 main()
