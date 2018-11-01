@@ -67,6 +67,6 @@ def main():
     print("Final Scores:")
     print("Your score is: " + str(playerPoints))
     for bots in range (numBots):
-        print(bot.name + "score is: " + str(bot.totalPoints()))
+        print(bot.name + " score is: " + str(bot.totalPoints()))
 
 main()
