@@ -25,6 +25,7 @@ def main():
     numQuestions = int(input("How many questions do you want (1-30)?"))
     print("Okay you will have " + str(numQuestions) + " questions")
 
+    #creating the different computers
     numBots = int(input("How many players do you want to play against (0-3)?"))
     print("Okay you will be playing against " + str(numBots) + " computer(s)")
     for bots in range (numBots):
@@ -34,6 +35,7 @@ def main():
 
     ready = input("Press any key to start")
 
+    #asking questions
     playerPoints = 0
     q = 6
     for q in range (numQuestions):
@@ -53,12 +55,14 @@ def main():
         print("")
         x = input()
 
+        #grading the question and giving out points
         if x == qList[q]:
             playerPoints += 1
             print("Good Job, you have " + str(playerPoints) + " points\n")
         else:
             print("You Suck, you have " +str(playerPoints) +" points\n")
 
+    #revealing final scores of everyone
     finish = input("Game finished. Press any key to see final score")
     print("Final Scores:")
     print("Your score is: " + str(playerPoints))
