@@ -1,5 +1,6 @@
 import random
 import csv
+import codecs
 import time
 from threading import Thread
 
@@ -19,7 +20,8 @@ class compPlayer():
 #adds words individually into a list
 def makeList(qList):
     header = 0
-    with open('Questions.csv') as csvfile:
+    # with open('Questions.csv', 'r') as csvfile:
+    with codecs.open('Questions.csv', "r", encoding='utf-8', errors='ignore') as csvfile:
         csvreader = csv.reader(csvfile)
         for row in csvreader:
             if header == 0:
@@ -55,7 +57,7 @@ def selectNumQuestions():
             numQuestions = str(input("Please enter a number within the range of 1-30! "))
 
     print()
-    print("Okay, you will have " + str(numQuestions) + " questions.")
+    print("Okay, you will have " + str(numQuestions) + " question(s).")
     print()
     return int(numQuestions)
 
@@ -76,6 +78,7 @@ def answerQuestion(q, qList, points):
     answer = qList[q][5]
     ansLetter = answer[0].lower()
     ansActual = answer[3:].lower()
+    x = str(input("Your answer: "))
     if x.lower() == ansLetter or x.lower() == ansActual:
         points[0] += 1
         print("Correct! You now have " + str(points[0]) + " point(s).\n")
@@ -83,6 +86,7 @@ def answerQuestion(q, qList, points):
         points[1] += 1
         print("Incorrect! The bot is correct with answer: " + answer + ". You still have " +
               str(points[0]) + " point(s).\n")
+
 
 def calculateScores(points):
     print("Your score is: " + str(points[0]))
@@ -95,6 +99,7 @@ def calculateScores(points):
         print("It's a tie! Better luck next time!")
     else:
         print("You lose! Try again!")
+
 
 def main():
     # file = open("Questions.csv", "r") #reading file
