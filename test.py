@@ -4,8 +4,16 @@ import csv
 
 class MyTest(unittest.TestCase):
     def test1(self):
-        pass
-        # self.assertEqual(, makeList("test.csv"))
+        self.assertEqual(makeList([]), makeList([]))
+
+    def test2(self):
+        self.assertEqual(calculateScores([1,0]), "win")
+
+    def test3(self):
+        self.assertEqual(calculateScores([1,1]), "tie")
+
+    def test4(self):
+        self.assertEqual(calculateScores([0,1]), "lose")
 
 
 

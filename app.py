@@ -72,6 +72,7 @@ def askQuestion(q, qList):
     print('C) ' + qList[q][3])
     print('D) ' + qList[q][4])
     print()
+    return ""
 
 
 def answerQuestion(q, qList, points):
@@ -95,10 +96,14 @@ def calculateScores(points):
     print("The bot's score is: " + str(points[1]))
     if points[0] > points[1]:
         print("Congratulations! You win!")
+        return "win"
     elif points[0] == points[1]:
         print("It's a tie! Better luck next time!")
+        return "tie"
     else:
         print("You lose! Try again!")
+        return "lose"
+
 
 
 def main():
