@@ -3,6 +3,7 @@ import csv
 import codecs
 import time
 from threading import Thread
+import random
 
 
 class compPlayer():
@@ -72,7 +73,7 @@ def askQuestion(q, qList):
     print()
     return ""
 
-def answerQuestion(q, qList, points):
+def answerQuestion(q, qList, points, difficulty):
     answer = qList[q][5]
     ansLetter = answer[0].lower()
     ansActual = answer[3:].lower()
@@ -85,10 +86,43 @@ def answerQuestion(q, qList, points):
     #     print("Game Stopped")
     #     return True
     else:
-        points[1] += 1
-        print("Incorrect! The bot is correct with answer: " + answer + ". You still have " +
-              str(points[0]) + " point(s).\n")
-        # return False
+        print("Incorrect! The correct answer is " + answer+ ". You still have " + str(points[0]) + " point(s).\n")
+
+    if difficulty == 1:
+        correct_answer = 1
+        correct_answer_2 = 2
+        bot_answer = random.randint(1,8)
+        if bot_answer == correct_answer or bot_answer == correct_answer_2:
+            points[1] += 1
+            print("The bot got the answer correct! The bot now has " + str(points[1]) + " points.")
+            print()
+        else: 
+            print("The bot got the answer incorrect! The bot still has " + str(points[1]) + " points.")
+            print()
+
+    if difficulty == 2:
+        correct_answer = 1
+        correct_answer_2 = 2
+        bot_answer = random.randint(1,5)
+        if bot_answer == correct_answer or bot_answer == correct_answer_2:
+            points[1] += 1
+            print("The bot got the answer correct! The bot now has " + str(points[1]) + " points.")
+            print()
+        else: 
+            print("The bot got the answer incorrect! The bot still has " + str(points[1]) + " points.")
+            print()
+
+    if difficulty == 3:
+        correct_answer = 1
+        correct_answer_2 = 2
+        bot_answer = random.randint(1,3)
+        if bot_answer == correct_answer or bot_answer == correct_answer_2:
+            points[1] += 1
+            print("The bot got the answer correct! The bot now has " + str(points[1]) + " points.")
+            print()
+        else: 
+            print("The bot got the answer incorrect! The bot still has " + str(points[1]) + " points.")
+            print()
 
 def calculateScores(points):
     print("Your score is: " + str(points[0]))
@@ -144,9 +178,8 @@ def main():
     # while stopper == False and q < numQuestions:
     for q in range(numQuestions):
         askQuestion(q, qList)
-        answerQuestion(q, qList, points)
-        # stopper = answerQuestion(q, qList, points)
-        # q += 1
+        answerQuestion(q, qList, points, difficulty)
+
         #grading the question and giving out points
         # if x == qList[q]:
         #     playerPoints += 1
