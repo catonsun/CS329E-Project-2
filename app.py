@@ -31,7 +31,6 @@ def makeList(qList):
     csvfile.close()
     return qList
 
-
 def selectDifficulty():
     difficulty = str(input("What difficulty of bot do you want to play against? (1 - easy, 2 - medium, 3 hard): "))
     while str(difficulty) != '1' and str(difficulty) != '2' and str(difficulty) != '3':
@@ -42,8 +41,8 @@ def selectDifficulty():
     print("Okay, you will play against a bot with a difficulty level of " + str(levels[difficulty - 1]) + ".")
     return difficulty
 
-
 def selectNumQuestions():
+   #numQuestions = str(input("How many questions do you want (1-Infinite)? "))
     numQuestions = str(input("How many questions do you want (1-30)? "))
     flag = False
     while not flag:
@@ -61,7 +60,6 @@ def selectNumQuestions():
     print()
     return int(numQuestions)
 
-
 def askQuestion(q, qList):
     print("Question " + str(q + 1) + '!')
     print(qList[q][0])
@@ -74,7 +72,6 @@ def askQuestion(q, qList):
     print()
     return ""
 
-
 def answerQuestion(q, qList, points):
     answer = qList[q][5]
     ansLetter = answer[0].lower()
@@ -83,11 +80,15 @@ def answerQuestion(q, qList, points):
     if x.lower() == ansLetter or x.lower() == ansActual:
         points[0] += 1
         print("Correct! You now have " + str(points[0]) + " point(s).\n")
+    #     return False
+    # elif x.lower() == "stop":
+    #     print("Game Stopped")
+    #     return True
     else:
         points[1] += 1
         print("Incorrect! The bot is correct with answer: " + answer + ". You still have " +
               str(points[0]) + " point(s).\n")
-
+        # return False
 
 def calculateScores(points):
     print("Your score is: " + str(points[0]))
@@ -103,8 +104,6 @@ def calculateScores(points):
     else:
         print("You lose! Try again!")
         return "lose"
-
-
 
 def main():
     # file = open("Questions.csv", "r") #reading file
@@ -139,11 +138,15 @@ def main():
     print()
 
     #asking questions
+    stopper = False
     points = [0, 0]
+    q = 0
+    # while stopper == False and q < numQuestions:
     for q in range(numQuestions):
         askQuestion(q, qList)
         answerQuestion(q, qList, points)
-
+        # stopper = answerQuestion(q, qList, points)
+        # q += 1
         #grading the question and giving out points
         # if x == qList[q]:
         #     playerPoints += 1
