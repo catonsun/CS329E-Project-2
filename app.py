@@ -8,26 +8,26 @@ import msvcrt
 import sys
 
 
-class TimeoutExpired(Exception):
-    pass
-
-
-def input_with_timeout(prompt, timeout, timer=time.monotonic):
-    sys.stdout.write(prompt)
-    sys.stdout.flush()
-    endtime = timer() + timeout
-    result = []
-    while timer() < endtime:
-        if msvcrt.kbhit():
-            result.append(msvcrt.getwche()) #XXX can it block on multibyte characters?
-            if result[-1] == '\n':   #XXX check what Windows returns here
-                return ''.join(result[:-1])
-        time.sleep(0.04) # just to yield to other processes/threads
-    raise TimeoutExpired
-
-
-def setTimeout():
-    return 20
+# class TimeoutExpired(Exception):
+#     pass
+#
+#
+# def input_with_timeout(prompt, timeout, timer=time.monotonic):
+#     sys.stdout.write(prompt)
+#     sys.stdout.flush()
+#     endtime = timer() + timeout
+#     result = []
+#     while timer() < endtime:
+#         if msvcrt.kbhit():
+#             result.append(msvcrt.getwche()) #XXX can it block on multibyte characters?
+#             if result[-1] == '\n':   #XXX check what Windows returns here
+#                 return ''.join(result[:-1])
+#         time.sleep(0.04) # just to yield to other processes/threads
+#     raise TimeoutExpired
+#
+#
+# def setTimeout():
+#     return 20
 
 
 class compPlayer():
@@ -225,9 +225,7 @@ def main():
           'B (false) will correctly answer the question.')
     print('5) Another specialty question is the FRQ question. It is up to you to type out the correct answer '
           'in order to get the points.')
-    print('6) You will have 20 seconds to answer each question. If you fail to answer the question within that time,'
-          ' you will be considered wrong for that question.')
-    print('7) After you give your answer, the bot will have a chance at answering the question. The difficulty '
+    print('6) After you give your answer, the bot will have a chance at answering the question. The difficulty '
           'will determine how good it is at getting the right answer.')
     print()
 
