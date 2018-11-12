@@ -4,7 +4,7 @@ import codecs
 import time
 from threading import Thread, Timer
 import random
-import msvcrt
+# import msvcrt
 import sys
 
 
