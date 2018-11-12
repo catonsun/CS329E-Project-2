@@ -242,7 +242,7 @@ def main():
     difficulty = selectDifficulty()
 
     print()
-    input("Press any key to start!")
+    input("Press enter to start!")
     print()
 
     #asking questions
